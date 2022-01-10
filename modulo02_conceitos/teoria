@@ -1,0 +1,12 @@
+---O Que é Docker?---
+1 - é uma tecnologia de virtualização não tradicional (VM)
+2 - é uma engine(serviço) de administração de containers
+3 - utiliza os serviços do LXC (Linux Containers) //os containers são baseados em linux
+4 - Open source escrita em GO
+5 - Empacota software com vários níveis de isolamento
+
+---Por que não usar uma Máquina Virtual(VM) e sim o Docker?---
+1 - usa menos recursos do computador do que uma VM, logo executa mais rápido que uma vm
+2 - Possui os mesmos benefícios que uma VM
+    - isolamento do nosso sistema operacional em si
+    - elasticidade: aumentar ou diminuir recursos
