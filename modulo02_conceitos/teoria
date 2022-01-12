@@ -5,8 +5,47 @@
 4 - Open source escrita em GO
 5 - Empacota software com vários níveis de isolamento
 
----Por que não usar uma Máquina Virtual(VM) e sim o Docker?---
+---Por Que Não Usar Uma Máquina Virtual(VM) e Sim o Docker?---
 1 - usa menos recursos do computador do que uma VM, logo executa mais rápido que uma vm
 2 - Possui os mesmos benefícios que uma VM
     - isolamento do nosso sistema operacional em si
     - elasticidade: aumentar ou diminuir recursos
+
+---O Que São Containers?---
+1 - Ambientes leves e portáteis no qual aplicações são executadas
+2 - Encapsula todos os binários e bibliotecas necessárias p/ a execução de uma aplicação
+3 - Sistema de arquivos criados a partir de uma imagem (modelo, por assim dizer)
+4 - Segregação de processos no mesmo Kernel da máquina
+6 - Algo entre um chroot e uma VM
+
+OBS 1: É de boa prática ser minimalista ao criar um container. Ex: ter um container p/ o banco, 
+outro para o backend...
+
+OBS 2: O kernel é responsável por ser o elo do hardware (parte física) com o software (parte lógica) do computador. 
+Em outras palavras, o principal objetivo é gerenciar o computador e permitir que os aplicativos 
+sejam executados e façam uso dos recursos que a máquina tem
+
+0BS 3: Chroot (Change root) é um utilitário do sistema Unix usado para alterar o diretório aparente do root 
+para criar um novo ambiente logicamente separado do diretório root do sistema principal. 
+Este novo ambiente é conhecido como "jaula chroot". 
+Um usuário operando de dentro da jaula não pode ver ou acessar arquivos fora do ambiente que tenha sido bloqueado.
+
+---O Que São Imagens Docker?---
+1 - Modelo de sistema de arquivo somente-leitura usado para criar containers
+2 - Podem serem criadas através de um processo chamado build ou de um commit
+(commit não é recomendado porque ele não gera uma documentação de como foi gerado aquela imagem)
+3 - São amazernadas em repositórios (DokerHub)
+4 - São compostas por uma ou + camadas (layers)
+5 - Uma camada representa uma ou + mudanças no sistema de arquivos
+6 - A junção dessas camadas formam a imagem
+7 - Depois que o sistema lê as camadas, ele inicia o container e gera uma nova camada
+    sendo essa a única que pode ser alterada
+8 - É possível compor imagens a patir de camadas de outras imagens.
+    Ex: pegar uma imagem do ubuntu e dá continuidade a ela
+
+---Imagens x Containers ---
+Analogia de orientação a objeto
+Imagens = Classe (modelo p/ se criar algo)
+Containers = Objeto (modelo em uso)
+
+A partir de uma imagem é possível iniciar vários containers
