@@ -1,0 +1,22 @@
+O comando Run cria sempre novos containers
+
+Façamos um teste, rode os comandos:
+1. docker container run -it debian bash
+    nesse comando foram usados 2 flags:
+    -i -> para usar o modo interativo
+    e -t -> para acessar o terminal do container
+
+2. touch curso-docker.txt
+    (cria um arquivo)
+
+3. ls curso-docker.txt
+    (confirma a existência do arquivo no diretório)
+
+4. exit
+    (sai do container)
+
+5. docker container run -it debian bash
+    (nesse momento ele criará outro container)
+
+6. ls curso-docker.txt
+    (confirma a inexistência do arquivo no diretório)

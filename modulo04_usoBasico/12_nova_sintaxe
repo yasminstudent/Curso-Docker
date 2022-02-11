@@ -1,0 +1,7 @@
+Alguns comandos da nova sintaxe:
+    * docker container ls
+    * docker image ls
+    * docker volume ls
+    * docker container rm id-do-container
+    * docker image rm id-da-image
+    * docker volume rm id-do-volume

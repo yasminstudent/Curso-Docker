@@ -1,0 +1,14 @@
+Rode o comando:
+docker container run -p 8080:80 nginx
+    sendo que
+    a porta 80 é a que será acessada 
+    a porta 8080 é a que será exposta p/ fora do container
+
+    ou seja, de fora, acessaremos/usaremos a porta 8080, 
+    mas internamente estaremos acessando a porta 80 do container
+
+    obs: esse comando irá iniciar um processo, p/ para-lo basta apertar as teclas:
+        CTRL + C 
+
+Agora, ao acessarmos o endereço: http://localhost:8080
+Acessaremos a página inicial do container que foi gerado anteriormente

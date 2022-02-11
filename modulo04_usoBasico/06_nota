@@ -1,0 +1,7 @@
+Os containers podem se comunicar entre si
+    (visto que uma aplicação pode se dividir em mais de um container, ex: front, back e banco)
+    e também podem se comunicar com a máquina host (sua máquina)
+
+    seja via porta, via pasta...
+
+Portanto existe um isolamento entre os containers e a máquina host, mas é um isolamento controlado

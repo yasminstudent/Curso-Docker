@@ -1,0 +1,12 @@
+Nomeando os containers para ficar mais fácil de reutiliza-los
+
+Para ver as possibilidades de usar o comando run:
+docker container run --help
+
+Agora execute:
+docker container run --name mydeb -it debian bash
+    (--name está nomeando o container p/ mydeb) 
+
+Os containers tem nomes únicos, 
+ao tentar criar um novo container com um nome já em uso 
+um erro será gerado.

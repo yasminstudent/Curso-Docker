@@ -1,6 +1,6 @@
 ---O Que é Docker?---
 1 - é uma tecnologia de virtualização não tradicional (VM)
-2 - é uma engine(serviço) de administração de containers
+2 - é uma engine (serviço) de administração de containers
 3 - utiliza os serviços do LXC (Linux Containers) //os containers são baseados em linux
 4 - Open source escrita em GO
 5 - Empacota software com vários níveis de isolamento
@@ -18,15 +18,12 @@
 4 - Segregação de processos no mesmo Kernel da máquina
 6 - Algo entre um chroot e uma VM
 
-OBS 1: É de boa prática ser minimalista ao criar um container. Ex: ter um container p/ o banco, 
-outro para o backend...
+OBS 1: É de boa prática ser minimalista ao criar um container. Ex: ter um container p/ o banco, outro para o backend...
 
 OBS 2: O kernel é responsável por ser o elo do hardware (parte física) com o software (parte lógica) do computador. 
-Em outras palavras, o principal objetivo é gerenciar o computador e permitir que os aplicativos 
-sejam executados e façam uso dos recursos que a máquina tem
+Em outras palavras, o principal objetivo é gerenciar o computador e permitir que os aplicativos sejam executados e façam uso dos recursos que a máquina tem
 
-0BS 3: Chroot (Change root) é um utilitário do sistema Unix usado para alterar o diretório aparente do root 
-para criar um novo ambiente logicamente separado do diretório root do sistema principal. 
+0BS 3: Chroot (Change root) é um utilitário do sistema Unix usado para alterar o diretório aparente do root para criar um novo ambiente logicamente separado do diretório root do sistema principal. 
 Este novo ambiente é conhecido como "jaula chroot". 
 Um usuário operando de dentro da jaula não pode ver ou acessar arquivos fora do ambiente que tenha sido bloqueado.
 

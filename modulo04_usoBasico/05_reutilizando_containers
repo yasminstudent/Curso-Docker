@@ -1,0 +1,25 @@
+Para visualizar os containers existentes na máquina, basta executar um dos comandos:
+    docker container ps -> mostra os containers ativos
+    docker container ps -a -> mostra os containers independente do status
+
+Agora, para reutilizar um container, rode:
+    docker container start -ai nomeDoContainer
+        ex: docker container start -ai mydeb
+        obs: -a é equivalente a -t
+
+Façamos um teste, rode os comandos:
+1. docker container start -ai mydeb
+
+2. touch curso-docker.txt
+    (cria um arquivo)
+
+3. ls 
+    (confirma a existência do arquivo no diretório)
+
+4. exit
+    (sai do container)
+
+5. docker container start -ai mydeb
+
+6. ls
+    (confirma a existência do arquivo no diretório)

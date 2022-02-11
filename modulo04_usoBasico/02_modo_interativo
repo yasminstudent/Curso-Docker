@@ -1,0 +1,24 @@
+Existem dois modos para usar o docker
+* Modo interativo: 
+  -> via terminal
+  -> roda comandos e traz a resposta
+  -> trata-se de algo + visual
+
+* Modo daemon:
+  -> executa o container e ele fica rodando como um processo
+
+Executando alguns comandos
+Comando: docker container run ubuntu bash --version
+Função: mostrar a versão do bash no container ubuntu
+
+Comando: docker container ps -a
+Função: mostrar todos os containers/comandos que foram executados independente do status atual
+
+Comando: docker container ps
+Função: mostrar todos os containers/comandos que foram executados e que estão ativos
+
+Comando: docker container run --rm ubuntu bash --version
+Função: 
+  - (run) executa o container ubuntu
+  - (bash --version) mostra a versão do bash no container
+  - (--rm) faz com que o comando não apareça na lista ao executar o comando anterior

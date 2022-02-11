@@ -1,0 +1,21 @@
+Mapeando diretórios para o container
+
+Rode o comando: 
+docker container run -p 8080:80 -v ${pwd}/html:/usr/share/nginx/html nginx
+    explicando
+    -v pasta_Do_Host_Q_Será_Mapeada:pasta_Dentro_Do_Container_Q_Fará_O_Mapeamento
+
+    faremos com ao acessar a pasta_Dentro_Do_Container_etc
+    ele aponte para a pasta_Do_Host_Q_Será_Mapeada
+
+    ou seja, acessando o endereço: http://localhost:8080
+    será exibido o index.html da pasta exercicio_volume/html
+    e não mais o index.html da pasta /usr/share/nginx/html (do container)
+
+----- Aviso sobre o comando pwd -----
+Tranquilo, galera?
+
+Passando para avisar que daqui em diante o professor vai utilizar um trecho de comando chamado "pwd". Esse comando retorna o caminho atual da pasta onde o terminal está localizado. Porém, esse "pwd" não irá funcionar em todos os terminais ou sistemas operacionais.
+
+Caso não funcione será necessário utilizar o comando absoluto da pasta em questão. Ou seja, algo como "c/users/SeuNome/docker", variando com a localização da pasta em questão.
+-------------------------------------

@@ -1,0 +1,9 @@
+Rodando um servidor web em background (modo Daemon)
+docker container run -d --name ex-daemon-basic -p 8080:80 -v ${pwd}/html:/usr/share/nginx/html nginx
+    (a flag -d indica que queremos rodar um container em modo daemon)
+
+A saída deverá ser o id do container
+
+Para parar o container, basta executar o comando: docker container stop ex-daemon-basic
+
+Para remover um container, rode: docker container rm [CONTAINER ID]

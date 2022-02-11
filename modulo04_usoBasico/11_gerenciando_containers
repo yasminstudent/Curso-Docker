@@ -1,0 +1,17 @@
+Para mostrar a lista de containers ativos:
+    * docker container ps
+    * docker container ls
+    * docker container lister
+    * docker ps (forma antiga)
+
+Para mostrar a lista de containers:
+    * docker container ps -a
+    * docker container ls -a
+    * docker container lister -a
+    * docker ps -a
+
+Para acessar os logs de um container:
+    * docker container logs nome-do-container
+
+Para inspecionar de um container (retornará um json):
+    docker container inspect nome-do-container
