@@ -34,6 +34,7 @@ Um usuário operando de dentro da jaula não pode ver ou acessar arquivos fora d
 3 - São amazernadas em repositórios (DokerHub)
 4 - São compostas por uma ou + camadas (layers)
 5 - Uma camada representa uma ou + mudanças no sistema de arquivos
+    (geralmente, cada comando representa uma layer, mas é possível concatenar n comandos, para formar uma única layer)
 6 - A junção dessas camadas formam a imagem
 7 - Depois que o sistema lê as camadas, ele inicia o container e gera uma nova camada
     sendo essa a única que pode ser alterada

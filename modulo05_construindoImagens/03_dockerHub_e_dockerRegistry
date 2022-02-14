@@ -1,0 +1,13 @@
+Docker Hub x Docker Registry
+
+Docker Registry:
+    -> Serviço que disponibiliza uma API para registro e obtenção de imagens
+    -> Pode-se criar um registry privado para a sua empresa
+
+Docker Hub
+    -> SAAS (Software As A Service)
+    -> produto em núvem
+    -> contém o Docker Registry
+    -> contém uma interface visual
+    -> possui imagens oficiais
+    -> semelhante ao github

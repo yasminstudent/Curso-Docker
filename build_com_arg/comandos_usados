@@ -1,0 +1,15 @@
+Entrar nessa pasta via terminal
+
+Rodar:
+docker image build -t ex-build-arg .
+docker container run ex-build-arg bash -c 'echo $S3_BUCKET'
+(saída: files)
+
+Agora iremos alterar o argumento S3_BUCKET:
+docker image build --build-arg S3_BUCKET=myapp -t ex-build-arg2 .
+docker container run ex-build-arg2 bash -c 'echo $S3_BUCKET'
+(saída: myapp)
+
+Podemos passar argumento no inspecionar também:
+docker image inspect --format="{{index .Config.Labels \"maintainer\"}}" ex-build-arg
+(saída: Aluno Cod3r <aluno at cod3r.vom.br>)

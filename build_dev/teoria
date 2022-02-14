@@ -1,0 +1,5 @@
+Dica: no Dockerfile, colocar as camadas(layers) mais prováveis de mudar por último,
+para o computador conseguir aproveitar boa parte do cache gerado anteriormente
+
+docker image build -t ex-build-dev .
+docker container run -it -v ${pwd}:/app -p 81:8000 --name python-server ex-build-dev

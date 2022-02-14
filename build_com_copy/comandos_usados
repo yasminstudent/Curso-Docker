@@ -1,0 +1,16 @@
+Entrar nessa pasta via terminal
+
+Rodar:
+docker image build -t ex-build-copy .
+docker container run -p 81:80 ex-build-copy
+
+explicando o Dockerfile:
+RUN echo '<h1>Sem conteudo<h1/>' > /usr/share/nginx/html/conteudo.html
+    - dentro do container
+    - na pasta /usr/share/nginx/html/
+    - no arquivo conteudo.html
+    - escreva <h1>Sem conteudo<h1/>
+
+COPY *.html /usr/share/nginx/html/
+    - copie todos os arquivos .html da pasta atual (onde o Dockerfile se encontra)
+    - para a pasta  /usr/share/nginx/html/

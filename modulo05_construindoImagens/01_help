@@ -1,0 +1,5 @@
+Alguns comando de ajuda:
+
+1. docker container --help
+2. docker image --help
+3. docker volume --help

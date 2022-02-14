@@ -1,0 +1,31 @@
+Dentro de um repositório do docker existem algumas tags,
+geralmente existe a tag latest, que trata-se da última versão da imagem
+
+Baixando uma imagem do docker hub com a nova sintaxe:
+-> docker image pull redis:latest
+Obs: redis é o nome do repositório
+
+Para inspecionar a imagem (retornará um json):
+-> docker image inspect redis:latest
+
+Podemos criar uma cópia da imagem:
+-> docker image tag redis:latest copyredis
+
+Obs: não é recomendado usar a última versão, e sim uma específica.
+Ao usar a última versão, pode gerar o seguinte problema:
+
+1º ambiente (A):
+  - criado dia 13/02
+  - usando a última versão da imagem x
+    (que no momento se tratava da versão 2.0)
+
+2º ambiente (B):
+  - criado dia 18/03
+  - usando a última versão da imagem x
+   (que no momento se tratava da versão 2.5)
+
+Diante desse cenário, pode ser que alguma coisa da aplicação deixe de funcionar.
+
+Então recomenda-se amarrar a aplicação a uma versão
+e ir controlando manualmente a evolução dessa imagem
+para ir resolvendo os possíveis problemas antes de subi-la

@@ -1,0 +1,39 @@
+documentação: https://docs.docker.com/engine/reference/commandline/docker/
+
+(Alguns dos comandos usados no curso, não estão todos aqui)
+
+----- Container -----
+1. docker container ls  -> (lista os containers ativos)
+2. docker container ls -a -> (lista os containers existentes)
+3. docker container rm id-do-container ou nome-do-container -> (exclui container)
+4. docker container logs nome-do-container -> (acessa os logs do container)
+5. docker container inspect nome-do-container -> (inspeciona um container, retorna um json com os dados)
+6. docker container --help -> lista os possíveis comandos
+
+Existem alguns comandos básicos p/ gerenciar um container em background:
+1. docker container start nome-do-container (ou id do container)
+2. docker container restart nome-do-container (ou id do container)
+3. docker container stop nome-do-container (ou id do container)
+4. docker container rm nome-do-container (ou id do container)
+
+----- Image -----
+1. docker image ls
+2. docker image ls -a
+3. docker image rm id-da-image ou nome-da-image
+4. docker image logs nome-da-image
+5. docker image inspect nome-da-image
+6. docker image --help
+7. docker image pull nomedaimagem:tag -> responsável por baixar uma imagem do docker hub
+    (lembrando que o comando run já faz isso)
+8. docker image tag nomedaimagem:tag novatag
+9. docker image build -> pega um arquivo descritor do docker e constroi uma imagem
+(mais detalhes em ../primeiro_build , ../build_com_arg etc)
+10. docker image push -> para publicar a imagem no docker hub ou no docker registry
+
+----- Volume -----
+1. docker volume ls
+2. docker volume ls -a
+3. docker volume rm id-do-volume ou nome-do-volume
+4. docker volume logs nome-do-volume 
+5. docker volume inspect nome-do-volume
+6. docker volume --help

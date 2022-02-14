@@ -1,0 +1,7 @@
+Subindo uma imagem para o Docker Hub
+
+Passos:
+1. Criar uma conta
+2. docker image tag ex-simple-build dockercod3r/simple-build:1.0
+3. docker login --username=dockercod3r
+4. docker image push dockercod3r/simple-build:1.0

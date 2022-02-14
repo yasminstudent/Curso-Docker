@@ -1,0 +1,8 @@
+Entrar nessa pasta via terminal
+
+Digitar os comandos:
+docker image build -t ex-simple-build .
+
+(-t nomeDaImagem caminhoDaPastaComODockerfile)
+
+docker container run -p 81:80 ex-simple-build
