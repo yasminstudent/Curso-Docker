@@ -1,0 +1,39 @@
+Tipos de Rede
+
+docker network ls
+
+None Network
+    - não acessa a internet
+    - não acessa redes locais
+    - não acessa outros containers
+
+Bridge Network
+    - acessa a internet
+    - acessa redes locais
+    - acessa outros containers
+
+Host Network
+    - usa as interfaces de rede da máquina host
+    - menos seguro
+    - mais rápido
+
+Overlay Network (Swarm)
+
+Por padrão, um container que é criado em uma rede não tem acesso aos containers que são criados em outras redes
+
+Para criar uma rede:
+docker network create --driver tipoDaRede nomeDaRede
+Ex: docker network create --driver bridge rede_nova
+
+Para inspecionar uma rede:
+docker network inspect nomeDaRede
+
+Criando um container dentro de uma rede:
+docker container run -d --name container3 --net nomeDaRede nomeDaImagem sleep 1000
+Ex: docker container run -d --name container3 --net rede_nova nomeDaImagem sleep 1000
+
+Para conectar um container de uma rede diferente a uma outra rede:
+docker network connect bridge container3
+
+Para desconectar um container de uma rede diferente a uma outra rede:
+docker network disconnect bridge container3
