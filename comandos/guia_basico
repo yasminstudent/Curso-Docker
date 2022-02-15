@@ -37,3 +37,11 @@ Existem alguns comandos básicos p/ gerenciar um container em background:
 4. docker volume logs nome-do-volume 
 5. docker volume inspect nome-do-volume
 6. docker volume --help
+
+----- Compose -----
+1. docker-compose up -> roda a aplicação através do arquivo docker-compose.yml
+2. docker-compose up -d (modo deamon)
+3. docker-compose down -> para a aplicação
+4. docker-compose logs -f -t -> exibe os logs da aplicação que está rodando
+5. docker-compose exec nomeDoServiço comando -> executa um comando dentro de um serviço especificado no  docker-compose.yml
+Ex: docker-compose exec db -U postegres -d email_sender -c 'select * from emails'
